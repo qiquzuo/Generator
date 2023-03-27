@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.generator.dao.studentMapper">
-  <resultMap id="BaseResultMap" type="com.example.generator.model.student">
+<mapper namespace="com.example.generator.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.example.generator.model.Student">
     <result column="SNO" jdbcType="VARCHAR" property="sno" />
     <result column="SNAME" jdbcType="VARCHAR" property="sname" />
     <result column="SSEX" jdbcType="VARCHAR" property="ssex" />
     <result column="SBIRTHDAY" jdbcType="TIMESTAMP" property="sbirthday" />
     <result column="CLASS" jdbcType="VARCHAR" property="class" />
   </resultMap>
-  <insert id="insert" parameterType="com.example.generator.model.student">
+  <insert id="insert" parameterType="com.example.generator.model.Student">
     insert into student (SNO, SNAME, SSEX, 
       SBIRTHDAY, CLASS)
     values (#{sno,jdbcType=VARCHAR}, #{sname,jdbcType=VARCHAR}, #{ssex,jdbcType=VARCHAR}, 

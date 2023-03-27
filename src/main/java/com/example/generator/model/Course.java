@@ -1,6 +1,6 @@
 package com.example.generator.model;
 
-public class course {
+public class Course {
     private String cno;
 
     private String cname;

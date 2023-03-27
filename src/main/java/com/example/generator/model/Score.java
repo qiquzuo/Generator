@@ -2,7 +2,7 @@ package com.example.generator.model;
 
 import java.math.BigDecimal;
 
-public class score {
+public class Score {
     private String sno;
 
     private String cno;

@@ -2,7 +2,7 @@ package com.example.generator.model;
 
 import java.util.Date;
 
-public class teacher {
+public class Teacher {
     private String tno;
 
     private String tname;
