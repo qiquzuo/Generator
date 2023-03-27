@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.generator.dao.courseMapper">
+  <resultMap id="BaseResultMap" type="com.example.generator.model.course">
+    <result column="CNO" jdbcType="VARCHAR" property="cno" />
+    <result column="CNAME" jdbcType="VARCHAR" property="cname" />
+    <result column="TNO" jdbcType="VARCHAR" property="tno" />
+  </resultMap>
+  <insert id="insert" parameterType="com.example.generator.model.course">
+    insert into course (CNO, CNAME, TNO
+      )
+    values (#{cno,jdbcType=VARCHAR}, #{cname,jdbcType=VARCHAR}, #{tno,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select CNO, CNAME, TNO
+    from course
+  </select>
+</mapper>

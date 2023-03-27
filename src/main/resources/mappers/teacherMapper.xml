@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.generator.dao.teacherMapper">
+  <resultMap id="BaseResultMap" type="com.example.generator.model.teacher">
+    <result column="TNO" jdbcType="VARCHAR" property="tno" />
+    <result column="TNAME" jdbcType="VARCHAR" property="tname" />
+    <result column="TSEX" jdbcType="VARCHAR" property="tsex" />
+    <result column="TBIRTHDAY" jdbcType="TIMESTAMP" property="tbirthday" />
+    <result column="PROF" jdbcType="VARCHAR" property="prof" />
+    <result column="DEPART" jdbcType="VARCHAR" property="depart" />
+  </resultMap>
+  <insert id="insert" parameterType="com.example.generator.model.teacher">
+    insert into teacher (TNO, TNAME, TSEX, 
+      TBIRTHDAY, PROF, DEPART
+      )
+    values (#{tno,jdbcType=VARCHAR}, #{tname,jdbcType=VARCHAR}, #{tsex,jdbcType=VARCHAR}, 
+      #{tbirthday,jdbcType=TIMESTAMP}, #{prof,jdbcType=VARCHAR}, #{depart,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select TNO, TNAME, TSEX, TBIRTHDAY, PROF, DEPART
+    from teacher
+  </select>
+</mapper>
